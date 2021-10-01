@@ -1,0 +1,186 @@
+.curtain {
+  position: absolute;
+  width: 100%;
+  background-color: rgb(28, 28, 29);
+  z-index: 10;
+  animation-name: openCurtain;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.landing {
+  margin-top: 0;
+  padding-top: 0;
+  background-color: #534d69;
+}
+
+.bg-split {
+  float: right;
+  background-color: rgb(38, 32, 44);
+  width: 69%;
+  height: 100vh;
+}
+
+.img-star {
+  width: 80%;
+  height: 100vh;
+  position: absolute;
+  left: 10%;
+  background-image: url(../../../assets/images/star.svg);
+  background-size: cover;
+}
+
+.img-container {
+  position: absolute;
+  top: 13%;
+  left: 7%;
+  background-image: url(../../../assets/images/3d.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 56.5%;
+  height: 74.81%;
+  box-shadow: 0px 80px 140px -40px rgba(0, 0, 0, 0.6);
+  animation-name: loadImage;
+  animation-duration: 1.5s;
+  animation-delay: 0.2s;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  .img-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0) translateX(110%) translateZ(0px);
+    background-color: rgb(38, 32, 44);
+    animation-name: openCover;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    animation-duration: 0.8s;
+  }
+}
+
+.text-content {
+  position: absolute;
+  top: 27%;
+  right: 6.5%;
+  h1 {
+    font-family: "futura_m";
+    font-size: 6.8em;
+    letter-spacing: 0.15em;
+    line-height: 140px;
+    color: #fff;
+    text-shadow: 0px 14px 7px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.more-content {
+  position: absolute;
+  top: 65%;
+  right: 18%;
+  color: #fff;
+
+  h3 {
+    font-size: 22px;
+    letter-spacing: 0.215rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    h3 {
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+    }
+
+    h3:hover {
+      transform: translate3d(0, -15%, 0);
+    }
+    img {
+      width: 40%;
+      margin-top: 1em;
+      margin-left: 10em;
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+    }
+
+    img:hover {
+      transform: translate3d(15%, 0, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .text-content {
+    top: 30%;
+    h1 {
+      line-height: 100px;
+      font-size: 4.8em;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .img-container {
+    width: 80%;
+    height: 55.633%;
+  }
+
+  .text-content {
+    top: 66%;
+    left: 6.5%;
+    h1 {
+      line-height: 40px;
+      font-size: 2.5rem;
+    }
+  }
+
+  .more-content {
+    top: 80%;
+    right: 25%;
+    h3 {
+      font-size: 18px;
+      letter-spacing: 0.215rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      img {
+        width: 40%;
+        margin-top: 1em;
+        margin-left: 7em;
+      }
+    }
+  }
+}
+
+@keyframes openCurtain {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes openCover {
+  0% {
+    transform: scale(1) translateX(0%) translateZ(0px);
+  }
+  99% {
+    transform: scale(1) translateX(110%) translateZ(0px);
+  }
+}
+
+@keyframes loadImage {
+  0% {
+    transform: scale(0.85) translateX(10%) translateZ(0px);
+  }
+  100% {
+    transform: scale(1) translateX(0%) translateZ(0px);
+  }
+}
