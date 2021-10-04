@@ -3,59 +3,11 @@
   height: 93vh;
 }
 
-.heading-number {
-  position: absolute;
-  font-family: "Abril Fatface";
-  color: #26202c;
-  font-size: 38px;
-}
-
-.heading-number::after {
-  content: "";
-  width: 4.8rem;
-  height: 2px;
-  background: #020b16;
-  position: absolute;
-  margin-top: 27px;
-}
-
-.left-header {
-  .heading-number {
-    left: 0;
-    padding-left: 5.2rem;
-  }
-  .heading-number::after {
-    left: 0;
-  }
-}
-
-.right-header {
-  .heading-number {
-    right: 0;
-    padding-right: 5.2rem;
-  }
-  .heading-number::after {
-    right: 0;
-  }
-}
-
 .about-container {
   width: 80%;
   height: 80vh;
   margin-left: 10%;
   display: flex;
-
-  .section-title {
-    position: absolute;
-    margin-top: 0.7em;
-    p {
-      font-family: "futura_m";
-      color: #ff4d5a;
-      font-size: 2.3em;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-    }
-  }
 
   .about-wrap {
     width: 50%;
@@ -179,11 +131,14 @@
 
 @media screen and (max-width: 1366px) {
   .about-name {
-    padding-top: 20% !important;
+    padding-top: 15% !important;
   }
 
   .about-text {
     padding-left: 2% !important;
+    p {
+      line-height: 40px !important;
+    }
   }
 
   .title-name {
@@ -198,12 +153,8 @@
 @media screen and (max-width: 500px) {
   .right-header {
     .heading-number {
-      top: 33.3%;
-      right: 0;
+      padding-top: 2.8rem;
       padding-right: 5.2rem;
-    }
-    .heading-number::after {
-      right: 0;
     }
   }
 
@@ -218,17 +169,14 @@
     width: 100% !important;
   }
 
-  .edu-wrap {
-    margin-top: 9em;
-  }
-
   .section-title {
     font-size: 0.7em;
     margin-top: 1.2em !important;
     margin-left: 13em;
   }
+
   .ml-0 {
-    margin-top: 7.3em !important;
+    margin-top: 5.5em !important;
     margin-left: 0 !important;
     margin-right: 35% !important;
   }
@@ -244,9 +192,36 @@
 
   .school-wrap {
     width: 100% !important;
+    margin-top: 5rem !important;
   }
 
   .school-set {
     margin-top: 70px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .about-container {
+    margin-left: 2.5% !important;
+  }
+
+  .about-text {
+    p {
+      font-size: 19px !important;
+    }
+  }
+
+  .about-wrap {
+    width: 90% !important;
+  }
+
+  .section-title {
+    margin-top: 2em !important;
+    font-size: 0.6em !important;
+  }
+
+  .ml-0 {
+    margin-top: 6.5em !important;
+    margin-right: 40% !important;
   }
 }

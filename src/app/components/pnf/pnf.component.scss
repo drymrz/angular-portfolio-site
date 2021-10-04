@@ -1,0 +1,121 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #1c1c1d;
+  color: #fff;
+  font-family: "futura_r";
+  text-align: center;
+}
+
+.txt {
+  width: 50%;
+  z-index: 10;
+  h1 {
+    font-size: 108px;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  .redirect {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    p:nth-child(2) {
+      animation: dot1 infinite 1s;
+    }
+
+    p:nth-child(3) {
+      animation: dot2 infinite 1s;
+    }
+  }
+}
+
+.img {
+  width: 50%;
+  height: 100%;
+
+  .item {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../assets/images/404.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .error-container {
+    display: block;
+  }
+
+  h1 {
+    top: 50vh;
+    font-size: 48px !important;
+  }
+
+  .txt,
+  .img {
+    width: 100% !important;
+  }
+
+  .txt {
+    position: absolute;
+    margin-top: 35%;
+  }
+
+  .img {
+    float: right;
+
+    .item {
+      position: absolute;
+      top: 50%;
+      height: 50%;
+      background-position: 30%;
+      background-size: 180%;
+    }
+  }
+}
+
+@keyframes dot1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+
+@keyframes dot2 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}

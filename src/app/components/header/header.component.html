@@ -1,11 +1,16 @@
-<header class="header">
+<header class="header black">
   <div class="logo-container">
-    <a href="./home">
+    <a href="./main">
       <div class="logo-img"></div>
     </a>
   </div>
   <div class="menu-container">
-    <button mat-icon-button (click)="onClick()">
+    <button
+      mat-icon-button
+      (click)="onClick()"
+      matBadge="5"
+      matBadgeColor="accent"
+    >
       <mat-icon>drag_handler</mat-icon>
     </button>
   </div>

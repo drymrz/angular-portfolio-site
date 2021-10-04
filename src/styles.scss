@@ -1,24 +1,9 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @import "~@angular/material/theming";
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat-core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
 $web-portfolio-primary: mat-palette($mat-indigo);
 $web-portfolio-accent: mat-palette($mat-pink, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
 $web-portfolio-warn: mat-palette($mat-red);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
 $web-portfolio-theme: mat-light-theme(
   (
     color: (
@@ -29,9 +14,6 @@ $web-portfolio-theme: mat-light-theme(
   )
 );
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include angular-material-theme($web-portfolio-theme);
 
 @font-face {
@@ -61,16 +43,149 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  animation-name: hideScroll;
-  animation-duration: 1.2s;
   background-color: #1c1c1d;
+  overflow: hidden;
 }
+
+.lock {
+  overflow: hidden;
+}
+
 section {
   width: 100%;
   height: 100vh;
   margin-top: 3%;
   padding-top: 4%;
 }
+
+.arrow {
+  width: 4%;
+  height: 5%;
+  position: fixed;
+  top: 21%;
+  background-image: url(assets/images/arrowblack.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.arrow-back {
+  left: 1.5%;
+  transform: rotate(180deg);
+  animation-name: arrowLeft;
+}
+
+.arrow-next {
+  right: 1.5%;
+  animation-name: arrowRight;
+}
+
+.arrow-back:hover {
+  transform: translate3d(-15%, 0, 0) rotate(180deg);
+}
+
+.arrow-next:hover {
+  transform: translate3d(15%, 0, 0);
+}
+
+.heading-number {
+  position: absolute;
+  font-family: "Abril Fatface";
+  color: #26202c;
+  font-size: 38px;
+}
+
+.heading-number::after {
+  content: "";
+  width: 4.8rem;
+  height: 2px;
+  background: #020b16;
+  position: absolute;
+  margin-top: 27px;
+}
+
+.left-header {
+  .heading-number {
+    left: 0;
+    padding-left: 5.2rem;
+  }
+  .heading-number::after {
+    left: 0;
+  }
+}
+
+.right-header {
+  .heading-number {
+    right: 0;
+    padding-right: 5.2rem;
+  }
+  .heading-number::after {
+    right: 0;
+  }
+}
+
+.section-title {
+  position: absolute;
+  margin-top: 0.7em;
+  p {
+    font-family: "futura_m";
+    color: #ff4d5a;
+    font-size: 2.3em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  body {
+    overflow: unset;
+  }
+
+  section {
+    overflow: hidden !important;
+    margin-top: 10%;
+    padding-top: 15%;
+  }
+
+  .about {
+    height: 180vh !important;
+  }
+
+  .collection {
+    height: 90vh !important;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+    display: none !important;
+  }
+}
+
+@keyframes arrowLeft {
+  0% {
+    transform: translateX(-100%) translateZ(0px) rotate(180deg);
+  }
+}
+
+@keyframes arrowRight {
+  0% {
+    transform: translateX(100%) translateZ(0px);
+  }
+}
+
+//    ANGULAR MAT OVERWRITE
 
 .mat-button-focus-overlay {
   background-color: transparent !important;
@@ -90,10 +205,6 @@ mat-card {
   ) !important;
 }
 
-// .linear-progress .mat-progress-bar-buffer {
-//   background: #008cf7;
-// }
-
 .linear-progress .mat-progress-bar-background {
   fill: #ff4d5a;
 }
@@ -109,23 +220,8 @@ mat-card {
   animation: none !important;
 }
 
-@media screen and (max-width: 500px) {
-  section {
-    margin-top: 10%;
-    padding-top: 15%;
-  }
-
-  .about,
-  .collection {
-    height: 200vh !important;
-  }
-}
-
-@keyframes hideScroll {
-  0% {
-    overflow: hidden;
-  }
-  100% {
-    overflow: hidden;
-  }
+.mat-tab-label,
+.mat-tab-link {
+  font-family: "futura_m" !important;
+  text-transform: uppercase !important;
 }

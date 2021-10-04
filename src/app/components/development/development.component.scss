@@ -1,0 +1,152 @@
+.development-container {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+
+  .devs-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .devs-content {
+      width: 80%;
+    }
+    .app-name {
+      width: 75%;
+      padding-top: 8%;
+      margin: auto;
+      p {
+        font-size: 24px;
+        font-family: "futura_de";
+        color: #072142;
+      }
+    }
+    .app-desc {
+      width: 75%;
+      margin: auto;
+      padding-top: 2%;
+      padding-left: 3%;
+      p,
+      a {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.863);
+        font-family: "futura_r";
+        line-height: 1.7;
+      }
+    }
+
+    .app-photos {
+      width: 70%;
+      margin: auto;
+    }
+
+    .mat-card {
+      width: 43.5%;
+      height: 350px;
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+
+    .width-90 {
+      width: 90%;
+    }
+
+    .flex-card {
+      display: flex;
+    }
+
+    .app-photos {
+      margin-top: 2rem;
+      cursor: pointer;
+      .app-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .app-name {
+    padding-top: 7% !important;
+    p {
+      font-size: 18px !important;
+    }
+  }
+  .app-desc {
+    padding-top: 1% !important;
+    padding-left: 3%;
+    p,
+    a {
+      font-size: 16px !important;
+    }
+  }
+
+  .app-photos {
+    margin-top: 0 !important;
+    cursor: pointer;
+  }
+
+  .mat-card {
+    height: 275px !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .development-container {
+    width: 100% !important;
+  }
+
+  .section-title {
+    font-size: 0.6em !important;
+    margin-top: 1.7em !important;
+    margin-left: 13em;
+  }
+
+  .devs-content {
+    width: 100% !important;
+  }
+  .devs-wrap {
+    .app-name {
+      padding-top: 30% !important;
+      padding-left: 5% !important;
+      p {
+        font-size: 20px;
+        font-family: "futura_de";
+        color: #072142;
+      }
+    }
+    .app-desc {
+      width: 90% !important;
+      padding-top: 5%;
+      padding-left: 7% !important;
+      p,
+      a {
+        font-size: 16px !important;
+        color: rgba(0, 0, 0, 0.863);
+        font-family: "futura_r";
+        line-height: 1.7;
+      }
+    }
+
+    .app-photos {
+      width: 100% !important;
+    }
+
+    .flex-card {
+      display: grid !important;
+
+      mat-card:nth-of-type(2) {
+        display: none;
+      }
+    }
+
+    .mat-card {
+      width: 50%;
+      height: 175px !important;
+      margin-bottom: 2rem;
+    }
+  }
+}

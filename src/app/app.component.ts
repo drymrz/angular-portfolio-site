@@ -14,12 +14,5 @@ export class AppComponent implements OnInit {
     document.body.appendChild(this.myElementScript);
   }
 
-  openSideNav() {
-    let ref = document.getElementById('btn-open')
-    ref?.click()
-  }
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 }
