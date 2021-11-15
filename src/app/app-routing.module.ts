@@ -13,17 +13,17 @@ const routes: Routes = [
   { path: 'development', component: DevelopmentComponent },
   { path: 'collection', component: CollectionComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'err404', component: PnfComponent },
+  { path: '404', component: PnfComponent },
   {
     path: '',
     redirectTo: 'main',
     pathMatch: 'full',
   },
-  { path: '**', redirectTo: 'err404', pathMatch: 'full' },
+  { path: '**', redirectTo: '404', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

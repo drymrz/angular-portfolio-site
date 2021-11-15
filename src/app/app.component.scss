@@ -48,10 +48,10 @@ mat-sidenav {
     transition-duration: 0.3s;
     transition-timing-function: ease;
     transition-delay: 0s;
-  }
 
-  a:hover {
-    text-shadow: none;
+    :hover {
+      text-shadow: none;
+    }
   }
 }
 
