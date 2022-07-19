@@ -1,0 +1,39 @@
+<header>
+  <div class="header-content">
+    <div class="left-part">
+      <div class="logo">
+        <a [routerLink]="['/']"
+          ><span class="visually-hidden">Home</span>
+          <svg
+            width="358"
+            height="188"
+            viewBox="0 0 358 188"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icons-style"
+          >
+            <path
+              d="M61.5 172H13L113.5 14L214.5 172H166L113.5 85.5L61.5 172Z"
+              stroke="#f3f2f9"
+              stroke-width="14"
+            />
+            <path
+              d="M198 16H149.5L250 174L308 83V172.5H351V16H302L250 102L198 16Z"
+              stroke="#f3f2f9"
+              stroke-width="14"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="right-part">
+      <div class="menu-icon" (click)="routerMenu()">
+        <input class="menu-icon__cheeckbox" id="click" type="checkbox" />
+        <div>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

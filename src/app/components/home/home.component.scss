@@ -1,0 +1,101 @@
+.home {
+  width: 100%;
+  height: inherit;
+  justify-content: space-around;
+}
+
+.home,
+.home .intro-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .intro-wrapper {
+  height: calc(var(--innerVh, 1vh) * 100);
+  justify-content: center;
+  margin: 0 var(--left-right-margin);
+}
+
+@media (max-width: 47.99em) {
+  .home .intro-wrapper {
+    font-size: 1.5rem;
+  }
+}
+
+.home .intro-wrapper .intro-text {
+  position: relative;
+  text-align: center;
+}
+@media (max-width: 47.99em) {
+  .home .intro-wrapper .intro-text {
+    text-align: center;
+  }
+}
+
+.home .intro-wrapper .intro-text .intro-id {
+  color: transparent;
+  font-family: studiofeixen, Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05rem;
+  font-weight: 800;
+  -webkit-text-stroke: 2px #aab2d1;
+  font-variation-settings: "wght" 800, "wdth" 100;
+}
+
+@media (max-width: 61.99em) {
+  .home .intro-wrapper .intro-text .intro-id {
+    -webkit-text-stroke: 1.25px #aab2d1;
+  }
+}
+
+.home .intro-wrapper .intro-text .name {
+  position: relative;
+  white-space: nowrap;
+  cursor: help;
+  display: inline-block;
+  font-family: studiofeixen-variable, studiofeixen, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-variation-settings: "wght" 800, "wdth" 125;
+  letter-spacing: normal;
+  // color: #aab2d1;
+  color: #f7cf60;
+  -webkit-text-stroke: 0;
+}
+.home .intro-wrapper .intro-text .wave-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.home .intro-wrapper .intro-text .wave-wrapper .wave {
+  position: absolute;
+  background-image: url(../../../assets/img/wave-light.svg);
+  background-repeat: repeat-x;
+  background-position-x: 0;
+  background-position-y: 0;
+  bottom: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 50%;
+}
+
+.home .intro-wrapper .intro-text .intro-roles .intro-role {
+  font-variation-settings: "wght" 500, "wdth" 100;
+}
+
+.home .intro-wrapper .intro-text .intro-links {
+  margin-top: var(--top-internal-margin);
+}
+
+.home .intro-wrapper .intro-text .intro-links li {
+  display: inline-flex;
+  margin-left: var(--left-right-internal-margin);
+}
+
+@media (max-width: 47.99em) {
+  .home .intro-wrapper .intro-text .intro-links li {
+    margin: 0 var(--left-right-internal-margin);
+  }
+}

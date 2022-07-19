@@ -1,0 +1,99 @@
+.menu {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  pointer-events: auto;
+}
+.menu .menu-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 var(--left-right-margin) 0 25%;
+}
+@media (max-width: 61.99em) {
+  .menu .menu-content {
+    margin: 0 var(--left-right-margin) 0 33%;
+  }
+}
+@media (max-width: 47.99em) {
+  .menu .menu-content {
+    margin: 0 var(--left-right-margin);
+  }
+}
+.menu .menu-items {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  margin: calc(var(--top-internal-margin) * 2) 0 0 1.5rem;
+  white-space: nowrap;
+}
+.menu .menu-items ol {
+  counter-reset: counter;
+}
+.menu .menu-items ol li {
+  counter-increment: counter;
+  list-style: none;
+  margin-left: -1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 61.99em) {
+  .menu .menu-items ol li {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 47.99em) {
+  .menu .menu-items ol li {
+    font-size: 1rem;
+  }
+}
+.menu .menu-items ol li .item-inner {
+  position: relative;
+  transform: translateY(100px);
+}
+.menu .menu-items ol li a h1 {
+  transition: 0.4s;
+}
+.menu .menu-items ol li a h1:hover {
+  font-variation-settings: "wght" 800, "wdth" 100;
+}
+.menu .menu-items ol li a :before {
+  content: "0" counter(counter);
+  font-size: 1rem;
+  font-variation-settings: "wght" 500, "wdth" 100;
+  margin-right: 0.5rem;
+}
+.menu-opened {
+  display: block;
+}
+.menu-socials {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: var(--top-internal-margin) 0 0 1.5rem;
+}
+.menu-socials ul li {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  margin-right: 1.5rem;
+}
+@media (max-width: 61.99em) {
+  .menu-socials ul li {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+}
+.menu-socials ul li .item-inner {
+  position: relative;
+}
