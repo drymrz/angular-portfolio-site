@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
 @Component({
@@ -10,7 +9,6 @@ import * as $ from 'jquery';
 })
 export class AppComponent implements OnInit {
   isMenuShow = false;
-  isSplash;
 
   constructor(private router: Router) {
     const blur = document.querySelector('body');

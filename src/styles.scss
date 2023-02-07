@@ -55,6 +55,8 @@
   --border-radius: 48px;
   --border: 2px;
   --border-radius-content: 0;
+  --svg-x: -16%;
+  --svg-y: 1%;
 }
 @media (min-width: 62em) and (max-width: 74.99em) {
   :root {
@@ -71,6 +73,8 @@
 }
 @media (max-width: 35.99em) {
   :root {
+    --svg-x: 60%;
+    --svg-y: 22%;
     --left-right-margin: 24px;
     --top-margin: 84px;
     --border: 1.5px;
@@ -199,7 +203,7 @@ a {
 }
 @media (max-width: 61.99em) {
   a {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -223,6 +227,8 @@ a {
 .cursor-dot {
   display: none;
   position: fixed;
+  -webkit-animation: grain 7s steps(10) infinite;
+  animation: grain 7s steps(10) infinite;
   pointer-events: none;
   top: 50%;
   left: 50%;
@@ -265,6 +271,9 @@ a {
     url(assets/img/body-sx-side.svg) no-repeat,
     url(assets/img/blob-dx-new.svg) no-repeat;
   transition: 0.3s linear;
+
+  -webkit-animation: animateBg 12s infinite;
+  animation: animateBg 12s infinite;
 }
 
 .blur .canvas {
@@ -276,6 +285,29 @@ a {
     background-position: calc(50vw + -44px) -300px, calc(50vw - 1687px) 192px,
       calc(50vw - 952px) -376px;
     background-size: 503px 936px, 1658px 1717px, 1000px 834px;
+  }
+
+  @keyframes animateBg {
+    0% {
+      background-position: calc(50vw + -44px) -300px, calc(50vw - 1687px) 192px,
+        calc(50vw - 952px) -376px;
+      background-size: 503px 936px, 1658px 1717px, 1000px 834px;
+    }
+    35% {
+      background-position: calc(50vw + -46px) -303px, calc(50vw - 1680px) 195px,
+        calc(50vw - 939px) -356px;
+      background-size: 503px 936px, 1658px 1717px, 980px 834px;
+    }
+    85% {
+      background-position: calc(50vw + -50px) -293px, calc(50vw - 1683px) 193px,
+        calc(50vw - 947px) -380px;
+      background-size: 503px 936px, 1658px 1717px, 990px 834px;
+    }
+    100% {
+      background-position: calc(50vw + -44px) -300px, calc(50vw - 1687px) 192px,
+        calc(50vw - 952px) -376px;
+      background-size: 503px 936px, 1658px 1717px, 1000px 834px;
+    }
   }
 }
 
@@ -291,6 +323,29 @@ a {
     background-position: calc(50vw + 166px) -300px, calc(50vw - 1994px) 350px,
       calc(50vw - 1227px) -520px;
     background-size: 1463px 1402px, 1658px 1717px, 1000px 1000px;
+  }
+
+  @keyframes animateBg {
+    0% {
+      background-position: calc(50vw + 166px) -300px, calc(50vw - 1994px) 350px,
+        calc(50vw - 1227px) -520px;
+      background-size: 1463px 1402px, 1658px 1717px, 1000px 1000px;
+    }
+    35% {
+      background-position: calc(50vw + 146px) -290px, calc(50vw - 1998px) 353px,
+        calc(50vw - 1210px) -513px;
+      background-size: 1413px 1402px, 1658px 1717px, 1000px 1000px;
+    }
+    70% {
+      background-position: calc(50vw + 173px) -315px, calc(50vw - 1986px) 345px,
+        calc(50vw - 1222px) -525px;
+      background-size: 1433px 1392px, 1658px 1717px, 1000px 1000px;
+    }
+    100% {
+      background-position: calc(50vw + 166px) -300px, calc(50vw - 1994px) 350px,
+        calc(50vw - 1227px) -520px;
+      background-size: 1463px 1402px, 1658px 1717px, 1000px 1000px;
+    }
   }
 }
 
