@@ -6,18 +6,25 @@ import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { BukutamuComponent } from './components/project/bukutamu/bukutamu.component';
 import { FasrainComponent } from './components/project/fasrain/fasrain.component';
+import { GalleriaComponent } from './components/project/galleria/galleria.component';
 import { GolistrikComponent } from './components/project/golistrik/golistrik.component';
 import { LaravelblogComponent } from './components/project/laravelblog/laravelblog.component';
+import { MemorygameComponent } from './components/project/memorygame/memorygame.component';
 import { OldportfolioComponent } from './components/project/oldportfolio/oldportfolio.component';
 import { PabpComponent } from './components/project/pabp/pabp.component';
 import { PerpustakaanComponent } from './components/project/perpustakaan/perpustakaan.component';
 import { SkyislandComponent } from './components/project/skyisland/skyisland.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { SpotifyComponent } from './components/spotify/spotify.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'spotify',
+    component: SpotifyComponent,
   },
   {
     path: 'menu',
@@ -52,8 +59,8 @@ const routes: Routes = [
     component: PabpComponent,
   },
   {
-    path: 'project/laravelblog',
-    component: LaravelblogComponent,
+    path: 'project/galleria',
+    component: GalleriaComponent,
   },
   {
     path: 'project/perpus',
@@ -68,6 +75,10 @@ const routes: Routes = [
     component: SkyislandComponent,
   },
   {
+    path: 'project/memogame',
+    component: MemorygameComponent,
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
@@ -78,4 +89,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

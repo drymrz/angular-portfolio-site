@@ -79,6 +79,17 @@
   padding-top: 177.7777777778%;
   border-radius: 0 0 0 var(--border-radius);
 }
+
+.profile-pic-wrapper span {
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  width: initial;
+  height: initial;
+  position: absolute;
+  inset: 0px;
+}
+
 @media (max-width: 74.99em) {
   .about-right .profile-pic-wrapper {
     padding-top: 133.3333333333%;
@@ -101,6 +112,10 @@
 .about-right .profile-pic-wrapper .profile-pic {
   border-radius: 0 0 0 var(--border-radius);
   background-color: #606887;
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 140% 25%;
 }
 @media (max-width: 47.99em) {
   .about-right .profile-pic-wrapper .profile-pic {
@@ -110,5 +125,7 @@
 @media (max-width: 61.99em) and (orientation: portrait) {
   .about-right .profile-pic-wrapper .profile-pic {
     border-radius: var(--border-radius);
+    width: 100%;
+    height: 100%;
   }
 }

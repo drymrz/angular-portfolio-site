@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,9 @@ import { OldportfolioComponent } from './components/project/oldportfolio/oldport
 import { SkyislandComponent } from './components/project/skyisland/skyisland.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { GalleriaComponent } from './components/project/galleria/galleria.component';
+import { MemorygameComponent } from './components/project/memorygame/memorygame.component';
+import { SpotifyComponent } from './components/spotify/spotify.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +40,11 @@ import { ContactComponent } from './components/contact/contact.component';
     SkyislandComponent,
     MenuComponent,
     ContactComponent,
+    GalleriaComponent,
+    MemorygameComponent,
+    SpotifyComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
