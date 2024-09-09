@@ -10,7 +10,7 @@ export class SpotifyService {
 
   constructor(private _http: HttpClient) { }
 
-  TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=11&offset=10`
+  TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=11`
   RECENT_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played?limit=1`
   NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`
   TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`

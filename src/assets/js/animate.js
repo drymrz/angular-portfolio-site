@@ -39,7 +39,7 @@ $(document).mouseup(function () {
   });
 });
 
-$(".name,.link,.logo, .menu-icon, li, .next-project").hover(
+$(".name,.link,.logo, .menu-icon, li, .next-project, .hvr").hover(
   function () {
     // over
     $("#cursor").css({

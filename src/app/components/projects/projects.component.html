@@ -183,7 +183,7 @@
           <span
             ><img
               sizes="100vw"
-              src="../../../assets/img/gallery/home.PNG"
+              src="../../../assets/img/compressed/galleria/home.webp"
               data-nimg="fill"
               class="projects-image"
               style="
@@ -207,7 +207,31 @@
           <span
             ><img
               sizes="100vw"
-              src="../../../assets/img/memogame/start.PNG"
+              src="../../../assets/img/compressed/memogame/start.webp"
+              data-nimg="fill"
+              class="projects-image"
+              style="
+                object-position: 50% 50%;
+                background-color: rgb(70, 80, 156);
+              "
+          /></span>
+        </div>
+      </div>
+      <!-- proj-10 -->
+      <div
+        class="projects-image-wrapper"
+        [ngStyle]="hover == 10 ? { opacity: '1' } : { opacity: '0' }"
+      >
+        <div
+          class="projects-image-scale"
+          [ngStyle]="
+            hover == 10 ? { transform: 'scale(1.02)' } : { transform: 'none' }
+          "
+        >
+          <span
+            ><img
+              sizes="100vw"
+              src="../../../assets/img/compressed/gaskan/logo.jpg"
               data-nimg="fill"
               class="projects-image"
               style="
@@ -224,12 +248,33 @@
       <div>
         <div class="page-head">
           <h2 class="page-title">Project</h2>
-          <h5>9</h5>
+          <h5>10</h5>
         </div>
         <hr class="head-separator" />
       </div>
-    </div>  
+    </div>
     <ul id="scroll-area">
+      <!-- gaskan -->
+      <li
+        style="opacity: 1"
+        id="hvr"
+        (mouseover)="hover = 10"
+        (mouseleave)="hover = 0"
+      >
+        <a [routerLink]="['/projects']" id="pro-5"
+          ><div class="projects-row">
+            <div class="projects-row-left">
+              <div class="projects-selected-wrapper">
+                <h4 class="projects-selected">→</h4>
+              </div>
+              <h4 class="projects-title">gaskan</h4>
+            </div>
+            <div class="projects-row-right">
+              <p class="projects-category">iOS App</p>
+            </div>
+          </div></a
+        >
+      </li>
       <!-- galleria -->
       <li
         style="opacity: 1"

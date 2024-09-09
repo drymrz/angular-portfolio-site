@@ -16,6 +16,7 @@ import { PerpustakaanComponent } from './components/project/perpustakaan/perpust
 import { SkyislandComponent } from './components/project/skyisland/skyisland.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SpotifyComponent } from './components/spotify/spotify.component';
+import { TorooComponent } from './components/project/toroo/toroo.component';
 
 const routes: Routes = [
   {
@@ -77,6 +78,10 @@ const routes: Routes = [
   {
     path: 'project/memogame',
     component: MemorygameComponent,
+  },
+  {
+    path: 'project/toroo',
+    component: TorooComponent,
   },
   {
     path: '**',

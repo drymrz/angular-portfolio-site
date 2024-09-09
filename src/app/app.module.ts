@@ -22,6 +22,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { GalleriaComponent } from './components/project/galleria/galleria.component';
 import { MemorygameComponent } from './components/project/memorygame/memorygame.component';
 import { SpotifyComponent } from './components/spotify/spotify.component';
+import { TorooComponent } from './components/project/toroo/toroo.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { SpotifyComponent } from './components/spotify/spotify.component';
     GalleriaComponent,
     MemorygameComponent,
     SpotifyComponent,
+    TorooComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule],
   providers: [],
